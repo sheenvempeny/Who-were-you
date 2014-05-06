@@ -14,17 +14,16 @@
 {
     
     __unsafe_unretained id delegate;
-    
     IBOutlet FBUploadView *uploadView;
-    
     IBOutlet FBUploadView *cancelView;
-    
     UIImage *imageToUpload;
     
 }
 
 @property(nonatomic,retain)UIImage *imageToUpload;
 @property(nonatomic,assign) id delegate;
+
+
 
 @end
 

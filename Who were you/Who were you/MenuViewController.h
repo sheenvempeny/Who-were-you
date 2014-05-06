@@ -11,20 +11,15 @@
 
 @interface MenuViewController : UIViewController
 {
-    
-   __unsafe_unretained id delegate;
-    
+    __unsafe_unretained id delegate;
     BOOL disableFaceBook;
-    
     IBOutlet UIButton *faceBookButton;
 }
 
 @property(nonatomic,assign) id delegate;
 
 -(IBAction)saveToPhotoAlbum:(id)sender;
-
 -(IBAction)shareToFacebook:(id)sender;
-
 -(IBAction)cancel:(id)sender;
 
 
@@ -34,9 +29,7 @@
 @protocol  MenuViewDelegate <NSObject>
 
 -(void)saveToPhotoAlbumClicked;
-
 -(void)shareToFacebookClicked;
-
 -(void)cancelClicked;
 
 @end

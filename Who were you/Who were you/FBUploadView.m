@@ -108,6 +108,13 @@ button = _button;
     self.backgroundColor = [UIColor clearColor];
     
 }
+- (NSString *)logInText {
+    return self.text;
+}
+
+- (NSString *)logOutText {
+	return self.text;
+}
 
 - (CGSize)sizeThatFits:(CGSize)size {
     CGSize logInSize = [[self logInText] sizeWithFont:self.label.font];
@@ -121,13 +128,6 @@ button = _button;
     return CGSizeMake(width, g_imageSize.height);
 }
 
-- (NSString *)logInText {
-    return self.text;
-}
-
-- (NSString *)logOutText {
-        return self.text;
-}
 
 
 - (void)buttonPressed:(id)sender {

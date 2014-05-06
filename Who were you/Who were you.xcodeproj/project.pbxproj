@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30CCE32C1918BF2C0040A8EE /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CCE32B1918BF2C0040A8EE /* Utilities.m */; };
 		CC0C59E61652C937005B6891 /* MainStoryboard_iPhoneOld.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0C59E41652C937005B6891 /* MainStoryboard_iPhoneOld.storyboard */; };
 		CC1689E01662AE1B00D30656 /* MenuViewController-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1689DF1662AE1B00D30656 /* MenuViewController-iPhone.xib */; };
 		CC31B40D1657722700021D20 /* camera-_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC31B40B1657722700021D20 /* camera-_icon.png */; };
@@ -135,6 +136,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30CCE32A1918BF2C0040A8EE /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		30CCE32B1918BF2C0040A8EE /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		CC0C59E51652C937005B6891 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhoneOld.storyboard; sourceTree = "<group>"; };
 		CC1689DF1662AE1B00D30656 /* MenuViewController-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MenuViewController-iPhone.xib"; sourceTree = "<group>"; };
 		CC31B40B1657722700021D20 /* camera-_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-_icon.png"; sourceTree = "<group>"; };
@@ -298,6 +301,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30CCE3251918BEAB0040A8EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC6AFBC91643EC48006C47A1 /* ViewController.h */,
+				CC6AFBCA1643EC48006C47A1 /* ViewController.m */,
+				CC98370D165422BA00416791 /* ResultController.h */,
+				CC98370E165422BA00416791 /* ResultController.m */,
+				CC5CC23F166A72B3009CE5AB /* FaceBookViewController.h */,
+				CC5CC240166A72B4009CE5AB /* FaceBookViewController.m */,
+				CC65742D166143E9005B0831 /* MenuViewController.h */,
+				CC65742E166143E9005B0831 /* MenuViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		30CCE3271918BEC90040A8EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC5CC248166A8657009CE5AB /* FBUploadView.h */,
+				CC5CC249166A8657009CE5AB /* FBUploadView.m */,
+				CC5A2CBD165590860070E850 /* GradientView.h */,
+				CC5A2CBE165590860070E850 /* GradientView.m */,
+				CC71EBF816566008009194DF /* SCNavigationBar.h */,
+				CC71EBF916566009009194DF /* SCNavigationBar.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		30CCE3281918BEDD0040A8EE /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				CC6690DA16457AAF008D09A8 /* PastLife.h */,
+				CC6690DB16457AAF008D09A8 /* PastLife.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		30CCE3291918BEF30040A8EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				30CCE32A1918BF2C0040A8EE /* Utilities.h */,
+				30CCE32B1918BF2C0040A8EE /* Utilities.m */,
+				CC49F7C716552D0900E9A573 /* UIImage+Resize.h */,
+				CC49F7C816552D0900E9A573 /* UIImage+Resize.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		CC37AB0F1651694400263CB6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,27 +498,13 @@
 		CC6AFBB11643EC48006C47A1 /* Who were you */ = {
 			isa = PBXGroup;
 			children = (
+				30CCE3291918BEF30040A8EE /* Utilities */,
+				30CCE3281918BEDD0040A8EE /* Modal */,
+				30CCE3271918BEC90040A8EE /* View */,
+				30CCE3251918BEAB0040A8EE /* Controller */,
 				CC5A2CB7165581380070E850 /* Xib */,
-				CC6690DA16457AAF008D09A8 /* PastLife.h */,
-				CC6690DB16457AAF008D09A8 /* PastLife.m */,
-				CC5A2CBD165590860070E850 /* GradientView.h */,
-				CC5A2CBE165590860070E850 /* GradientView.m */,
-				CC65742D166143E9005B0831 /* MenuViewController.h */,
-				CC65742E166143E9005B0831 /* MenuViewController.m */,
-				CC71EBF816566008009194DF /* SCNavigationBar.h */,
-				CC71EBF916566009009194DF /* SCNavigationBar.m */,
 				CC6AFBBA1643EC48006C47A1 /* AppDelegate.h */,
 				CC6AFBBB1643EC48006C47A1 /* AppDelegate.m */,
-				CC98370D165422BA00416791 /* ResultController.h */,
-				CC98370E165422BA00416791 /* ResultController.m */,
-				CC5CC248166A8657009CE5AB /* FBUploadView.h */,
-				CC5CC249166A8657009CE5AB /* FBUploadView.m */,
-				CC5CC23F166A72B3009CE5AB /* FaceBookViewController.h */,
-				CC5CC240166A72B4009CE5AB /* FaceBookViewController.m */,
-				CC49F7C716552D0900E9A573 /* UIImage+Resize.h */,
-				CC49F7C816552D0900E9A573 /* UIImage+Resize.m */,
-				CC6AFBC91643EC48006C47A1 /* ViewController.h */,
-				CC6AFBCA1643EC48006C47A1 /* ViewController.m */,
 				CC6AFBB21643EC48006C47A1 /* Supporting Files */,
 			);
 			path = "Who were you";
@@ -710,6 +747,7 @@
 				CC657430166143E9005B0831 /* MenuViewController.m in Sources */,
 				CC5CC242166A72B4009CE5AB /* FaceBookViewController.m in Sources */,
 				CC5CC24A166A8657009CE5AB /* FBUploadView.m in Sources */,
+				30CCE32C1918BF2C0040A8EE /* Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

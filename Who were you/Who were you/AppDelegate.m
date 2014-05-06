@@ -13,14 +13,6 @@
 
 @synthesize session;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [FBProfilePictureView class];
-    // Override point for customization after application launch.
-    [self initializeStoryBoardBasedOnScreenSize];
-    
-    return YES;
-}
 
 -(void)initializeStoryBoardBasedOnScreenSize {
     
@@ -123,6 +115,15 @@
     // FBSample logic
     // if the app is going away, we close the session object
     [FBSession.activeSession close];
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [FBProfilePictureView class];
+    // Override point for customization after application launch.
+    [self initializeStoryBoardBasedOnScreenSize];
+    
+    return YES;
 }
 
 

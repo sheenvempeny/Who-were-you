@@ -26,18 +26,18 @@
     ResultController *mResultController;
     IBOutlet SCNavigationBar *navigationBar;
 }
-@property(nonatomic,retain)ResultController *mResultController;
+@property(nonatomic,retain) ResultController *mResultController;
 @property (nonatomic, retain) UIImage *currentImage;
-@property (nonatomic, retain)  UIPopoverController *popOver;
-@property (nonatomic, retain)  IBOutlet UITextField *firstNameTxt;
-@property (nonatomic, retain)  IBOutlet UITextField *lastNameTxt;
-@property (nonatomic, retain)  IBOutlet UITextField *dobTextField;
-@property (nonatomic, retain)IBOutlet UIImageView *mUIImageView;
+@property (nonatomic, retain) UIPopoverController *popOver;
+@property (nonatomic, retain) IBOutlet UITextField *firstNameTxt;
+@property (nonatomic, retain) IBOutlet UITextField *lastNameTxt;
+@property (nonatomic, retain) IBOutlet UITextField *dobTextField;
+@property (nonatomic, retain) IBOutlet UIImageView *mUIImageView;
 @property (nonatomic, retain) IBOutlet UIToolbar *accessoryView;
 @property (nonatomic, retain) IBOutlet UIDatePicker *customInput;
 
-- (IBAction)dateChanged:(id)sender;
-- (IBAction)doneEditing:(id)sender;
+-(IBAction)dateChanged:(id)sender;
+-(IBAction)doneEditing:(id)sender;
 -(IBAction)openPhotoFromLibrary:(id)sender;
 -(IBAction)openPhotoFromCamera:(id)sender;
 -(void)loadResultViewController:(PastLife*)inPastLife;

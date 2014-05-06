@@ -10,8 +10,8 @@
 
 typedef enum
 {
-    eGreen=0,
-    eBlackAlpha=1
+    eGreen = 0,
+    eBlackAlpha = 1
     
 }eColor;
 

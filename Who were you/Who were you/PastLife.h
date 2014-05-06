@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PastLife : NSObject
+@interface PastLife : NSObject //Modal stores the personal information
 {
-    
     NSString *firstName;
     NSString *lastName;
     NSString *dob;
@@ -22,9 +21,9 @@
 @property(nonatomic,retain) NSString *firstName;
 @property(nonatomic,retain) NSString *lastName;
 @property(nonatomic,retain) NSString *dob;
-@property(nonatomic,retain) UIImage *currentImage;
-@property(nonatomic,retain) UIImage *pastLifeImage;
+@property(nonatomic,assign) UIImage *currentImage;
+@property(nonatomic,assign) UIImage *pastLifeImage;
 
--(void)calculateUniqueNumber;
+-(void)calculateUniqueNumber; //Finding the unique number
 
 @end

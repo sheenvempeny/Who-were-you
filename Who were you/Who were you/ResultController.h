@@ -28,13 +28,11 @@
     IBOutlet UILabel *currentLabel;
     
     PastLife *pastLife;
-    NSArray *images;
-    NSInteger imageNumber;
     
+    NSInteger imageNumber;
     AVAudioPlayer *animalSoundPlayer;
   
-       
-   UIPopoverController *menuPopoverController;
+	UIPopoverController *menuPopoverController;
     MenuViewController *mMenuViewController;
     FaceBookViewController *mFaceBookViewController;
     
@@ -50,14 +48,11 @@
 @property(nonatomic,retain) AVAudioPlayer *animalSoundPlayer;
 @property(nonatomic,retain) UINavigationBar *navigationBar;
 @property(nonatomic,retain) PastLife *pastLife;
-@property(nonatomic,retain) NSArray *images;
 
 -(IBAction)showMenu:(id)sender;
+-(IBAction)back:(id)sender;
 -(void)find;
 -(void)showFaceBookView;
--(IBAction)back:(id)sender;
--(NSString*)nameForIndex:(NSInteger)index;
-- (void)applyShinyBackgroundWithColor:(UIColor *)color forView:(UIView*)menuView;
--(UIImage*)createFinalImage;
+
 
 @end

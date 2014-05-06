@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) id<FBGraphUser> loggedInUser;
 
+- (IBAction)postPhotoClick:(UIButton *)sender;
+- (void)showAlert:(NSString *)message
+           result:(id)result
+            error:(NSError *)error;
 @end
 
 @implementation FaceBookViewController
@@ -34,29 +38,22 @@
     
      [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    CGRect loginViewFrame;
+    CGRect loginViewFrame = CGRectMake(37.0, 16.0, 231.0, 51.0);
    
      if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-         loginViewFrame=CGRectMake(269.0, 16.0, 231.0, 51.0);
-    else
-         loginViewFrame=CGRectMake(37.0, 16.0, 231.0, 51.0);
+         loginViewFrame = CGRectMake(269.0, 16.0, 231.0, 51.0);
   
-    FBLoginView *loginView = [[FBLoginView alloc] init];
-    
+	FBLoginView *loginView = [[FBLoginView alloc] init];
     loginView.frame = loginViewFrame;
     loginView.delegate = self;
-    
     [self.view addSubview:loginView];
-    
-    //[loginView sizeToFit];
-
-    
-    uploadView.tag = 1;
+ 
+	uploadView.tag = 1;
     cancelView.tag = 2;
-    uploadView.text=@"Upload";
-    cancelView.text=@"Cancel";
-    uploadView.delegate=self;
-    cancelView.delegate=self;
+    uploadView.text = @"Upload";
+    cancelView.text = @"Cancel";
+    uploadView.delegate = self;
+    cancelView.delegate = self;
     [uploadView initialize];
     [cancelView initialize];
    
@@ -71,14 +68,11 @@
 
 -(void)uploadPhoto
 {
-    
     [self postPhotoClick:nil];
-    
 }
 
 -(void)cancelled
 {
-    
     [delegate removeFacebookView];
     
 }
@@ -91,7 +85,8 @@
 }
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
-                            user:(id<FBGraphUser>)user {
+                            user:(id<FBGraphUser>)user 
+{
 //    // here we use helper properties of FBGraphUser to dot-through to first_name and
 //    // id properties of the json response from the server; alternatively we could use
 //    // NSDictionary methods such as objectForKey to get values from the my json object
@@ -102,15 +97,9 @@
     self.loggedInUser = user;
 }
 
-- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView 
+{
     BOOL canShareAnyhow = [FBNativeDialogs canPresentShareDialogWithSession:nil];
-//    self.buttonPostPhoto.enabled = canShareAnyhow;
-//    self.buttonPostStatus.enabled = canShareAnyhow;
-//    self.buttonPickFriends.enabled = NO;
-//    self.buttonPickPlace.enabled = NO;
-//    
-//    self.profilePic.profileID = nil;
-//    self.labelFirstName.text = nil;
     uploadView.enabled=canShareAnyhow;
     self.loggedInUser = nil;
 }
@@ -138,7 +127,8 @@
 
 // Post Photo button handler; will attempt to invoke the native
 // share dialog and, if that's unavailable, will post directly
-- (IBAction)postPhotoClick:(UIButton *)sender {
+- (IBAction)postPhotoClick:(UIButton *)sender 
+{
     // Just use the icon image from the application itself.  A real app would have a more
     // useful way to get an image.
     
@@ -167,7 +157,8 @@
 // UIAlertView helper for post buttons
 - (void)showAlert:(NSString *)message
            result:(id)result
-            error:(NSError *)error {
+            error:(NSError *)error 
+{
     
     NSString *alertMsg;
     NSString *alertTitle;

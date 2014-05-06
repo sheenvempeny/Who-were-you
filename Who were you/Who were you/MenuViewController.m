@@ -46,25 +46,17 @@
 
 -(IBAction)saveToPhotoAlbum:(id)sender
 {
-    
     [delegate saveToPhotoAlbumClicked];
-    
 }
 
 -(IBAction)shareToFacebook:(id)sender
 {
-    
-    
     [delegate shareToFacebookClicked];
-    
 }
 
 -(IBAction)cancel:(id)sender
 {
-    
-    
-   [delegate cancelClicked];
-    
+    [delegate cancelClicked];
 }
 
 
